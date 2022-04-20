@@ -1,0 +1,7 @@
+PWD /Users/karansinghd/PhD/Thesis/chapters/introduction
+INPUT /usr/local/texlive/2019/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT introduction.tex
+OUTPUT introduction.log
+OUTPUT introduction.pdf
