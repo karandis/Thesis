@@ -1,0 +1,311 @@
+%\documentclass[showinstructions,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[showinstructions,faculty=firw,department=cws,phddegree=cws,doctoralschool=ads]{adsphd}
+%\documentclass[showinstructions,showlabels,coverfontpercent=100,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[croppedpdf,showinstructions,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[online,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[print,bleed,cropmarks,faculty=firw,department=cws,phddegree=cws]{adsphd} % include bleed for the print service
+%\documentclass[print,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[final,faculty=firw,department=cws,phddegree=cws]{adsphd}
+%\documentclass[showinstructions,faculty=firw,department=cws,phddegree=cws,epub]{adsphd}
+\documentclass[final,faculty=fw,department=nat,phddegree=ste]{adsphd}
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!                                                               !!
+% !!  WARNING: do not remove the following lines between           !!
+% !!  "%%% COVER: Settings %%%" and "%%% COVER: End settings %%%"  !!
+% !!                                                               !!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%%% COVER: Settings %%%
+\title{The Title of Your PhD Dissertation}
+%\subtitle{Multiscale computing for Dummies}
+
+\author{Karan}{Dsilva}
+
+\supervisor{Prof.~Dr.~Hugues~Sana}{KU Leuven, Belgium}
+\supervisor{~Dr.~Tomer~Shenar}{University of Amsterdam, Netherlands}
+\president{Prof.~Dr.~Mieke~De~Cock}{KU Leuven, Belgium}
+%\jurymember{Prof.~Dr.~Jon.~Sundqvist}{KU Leuven, Belgium}
+%\jurymember{Dr.~Pierre~Royer}{KU Leuven, Belgium}
+%\externaljurymember{Prof.~Dr.~Paul~Crowther}{University of Sheffield, U.K.}
+\externaljurymember{Prof.~Dr.~Nicole~St.~Louis}{University of Montreal, Canada}
+
+% Your research group within the department
+% e.g. iMinds-DistriNet, Scientific Computing Group, ...
+\researchgroup{Institute of Astronomy}
+\website{https://fys.kuleuven.be/ster} % Leave empty to hide
+\email{} % Leave empty to hide
+
+\address{Celestijnenlaan 200D box 2401}
+% \addresscity{B-3001 Leuven} % This is the default value. Note
+                              % that 'B-3001 Heverlee' is _incorrect_!!
+                              % /[https://www.kuleuven.be/communicatie/marketing/intranet/huisstijl/taalgebruik.html]
+
+\date{July 2022}
+\copyyear{2022}
+%\udc{XXX.XX}            % UDC, deposit number and ISBN are no longer necessary.
+%\depot{XXXX/XXXX/XX}    % Leave out the initial D/ (it is added
+                         % automatically)
+%\isbn{XXX-XX-XXXX-XXX-X}
+
+
+% Set spine width:
+\setlength{\adsphdspinewidth}{9mm}
+
+%% Set bleeds
+%\setlength{\defaultlbleed}{7mm}
+%\setlength{\defaultrbleed}{7mm}
+
+% Set custom cover page
+% \setcustomcoverpage{mycoverpage.tex} % mycoverpage.tex is the default
+
+%%% COVER: End settings %%%
+
+% for the nomenclature (comment out if you do not use the nomencl package
+\usepackage{nomencl}   % For nomenclature
+\renewcommand{\nomname}{List of Symbols}
+\newcommand{\myprintnomenclature}{%
+  \cleardoublepage%
+  \printnomenclature%
+  \chaptermark{\nomname}
+  \addcontentsline{toc}{chapter}{\nomname} %% comment to exclude from TOC
+}
+\makenomenclature%
+
+% for the list of abbreviations (comment out if you do not use the glossaries package
+\usepackage{glossaries} % For list of abbreviations
+\newcommand{\glossname}{List of Abbreviations}
+\newcommand{\myprintglossary}{%
+  \renewcommand{\glossaryname}{\glossname}
+  \cleardoublepage%
+  \printglossary[title=\glossname]
+  \chaptermark{\glossname}
+  \addcontentsline{toc}{chapter}{\glossname} %% comment to exclude from TOC
+}
+\makeglossaries%
+
+
+% BibLaTeX
+%\usepackage[utf8]{inputenc}
+%\usepackage{csquotes}
+%\usepackage[
+  %hyperref=auto,
+  %mincrossrefs=999,
+  %backend=biber,
+  %style=authoryear-icomp
+%]{biblatex}
+%\addbibresource{allpapers.bib}
+
+% Fonts
+\usepackage{pdfpages}
+\usepackage{textcomp} % nice greek alphabet
+\usepackage{pifont}   % Dingbats
+\usepackage{booktabs}
+\usepackage{amssymb,amsthm}
+\usepackage{amsmath}
+
+% Custom shit starts here
+\usepackage{natbib,twoopt}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{longtable,ltcaption}
+\usepackage{afterpage}
+\usepackage{subfig}
+\usepackage{epsfig}
+\usepackage{array}
+\usepackage{graphicx,xcolor,textpos}
+\usepackage{ragged2e}
+\usepackage{romanbar}
+\usepackage{txfonts}
+\usepackage{lscape}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{gensymb}
+\DeclareUnicodeCharacter{00A0}{~}
+\bibpunct{(}{)}{;}{a}{}{,}
+
+\newcommand{\K}[1]{\textcolor{black}{#1}} %Comments Karan
+\renewcommand{\labelitemi}{$\diamond$}
+
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
+\definecolor{rred}{rgb}{0.76, 0.13, 0.28}
+\definecolor{junglegreen}{rgb}{0.16, 0.67, 0.53}
+
+\newcommand{\kms}{km~s$^{-1}$\,}
+\newcommand{\Msun}{M$_{\odot}$\,}
+\newcommand{\Lsun}{L$_{\odot}$\,}
+\newcommand{\Rsun}{R$_{\odot}$\,}
+\newcommand{\Teff}{$T_{\rm eff}$\,}
+\newcommand{\logg}{$\log\,g$\,}
+\newcommand{\FeH}{[Fe/H]}
+\newcommand{\bacchus}{{\footnotesize BACCHUS}}
+\newcommand{\vald}{{\footnotesize VALD}}
+\newcommand{\halpha}{H$\alpha$}
+\newcommand{\hbeta}{H$\beta$}
+\newcommand{\hgamma}{H$\gamma$}
+\newcommand{\vsini}{{$\varv\,\sin i$\,}}
+\newcommand{\cgs}{[cgs]}
+
+\newcommand{\NVred}{N\,{\sc v}\,$\lambda 4945$}
+\newcommand{\NVblue}{N\,{\sc v} $\lambda \lambda 4604, 4620$}
+\newcommand{\NIII}{N\,{\sc iii}\,$\lambda \lambda 4634, 4641$}
+\newcommand{\NIV}{N\,{\sc iv}\,$\lambda 4058$}
+\newcommand{\HeII}{He\,{\sc ii}\,$\lambda 4686$}
+\newcommand{\NIVred}{N\,{\sc iv} $\lambda \lambda \lambda 7103, 7109, 7123$}
+\newcommand{\niv}{N\,{\sc iv}}
+\newcommand{\nv}{N\,{\sc v}}
+\newcommand{\heii}{He\,{\sc ii}}
+
+\newcommand{\Pmin}{$P_\mathrm{min}$}
+\newcommand{\Pmax}{$P_\mathrm{max}$}
+\newcommand{\logPmin}{$\log P_\mathrm{min}$}
+\newcommand{\logPmax}{$\log P_\mathrm{max}$}
+
+\newcommand{\fobsWNE}{$f_{\textrm{obs}}^{\textrm{WNE}}$}
+\newcommand{\fobsWNL}{$f_{\textrm{obs}}^{\textrm{WNL}}$}
+\newcommand{\fobsWC}{$f_{\textrm{obs}}^{\textrm{WC}}$}
+
+\newcommand{\fintWNE}{$f_{\textrm{int}}^{\textrm{WNE}}$}
+\newcommand{\fintWNL}{$f_{\textrm{int}}^{\textrm{WNL}}$}
+\newcommand{\fintWC}{$f_{\textrm{int}}^{\textrm{WC}}$}
+
+% \usepackage{caption}
+% Journal name abbreviations
+\def\jnlref#1{{\rm#1}}
+\def\actaa{\jnlref{ACTA}}
+\def\aj{\jnlref{AJ}}
+\def\araa{\jnlref{ARA\&A}}
+\def\apj{\jnlref{ApJ}}
+\def\apjl{\jnlref{ApJ}}
+\def\rmxaa{\jnlref{RMxAA}}
+\def\apjs{\jnlref{ApJS}}
+\def\ao{\jnlref{Appl.~Opt.}}
+\def\apss{\jnlref{Ap\&SS}}
+\def\aap{\jnlref{A\&A}}
+\def\aapr{\jnlref{A\&A~Rev.}}
+\def\aaps{\jnlref{A\&AS}}
+\def\azh{\jnlref{AZh}}
+\def\baas{\jnlref{BAAS}}
+\def\jrasc{\jnlref{JRASC}}
+\def\memras{\jnlref{MmRAS}}
+\def\mnras{\jnlref{MNRAS}}
+\def\nar{\jnlref{NewAR}}
+\def\na{\jnlref{NewA}}
+\def\nat{\jnlref{Nature}}
+\def\pra{\jnlref{Phys.~Rev.~A}}
+\def\prb{\jnlref{Phys.~Rev.~B}}
+\def\prc{\jnlref{Phys.~Rev.~C}}
+\def\prd{\jnlref{Phys.~Rev.~D}}
+\def\pre{\jnlref{Phys.~Rev.~E}}
+\def\prl{\jnlref{Phys.~Rev.~Lett.}}
+\def\pasa{\jnlref{PASA}}
+\def\pasp{\jnlref{PASP}}
+\def\pasj{\jnlref{PASJ}}
+\def\qjras{\jnlref{QJRAS}}
+\def\skytel{\jnlref{S\&T}}
+\def\solphys{\jnlref{Sol.~Phys.}}
+\def\sovast{\jnlref{Soviet~Ast.}}
+\def\ssr{\jnlref{Space~Sci.~Rev.}}
+\def\zap{\jnlref{ZAp}}
+\def\iaucirc{\jnlref{IAU~Circ.}}
+\def\aplett{\jnlref{Astrophys.~Lett.}}
+\def\apspr{\jnlref{Astrophys.~Space~Phys.~Res.}}
+
+\newcounter{x}
+\def\ToRoman#1{\setcounter{x}{#1}\Roman{x}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=rred,
+    urlcolor=junglegreen,
+    citecolor=cerulean
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makefrontcoverXII
+
+\maketitle
+
+\frontmatter % to get \pagenumbering{roman}
+
+\includepreface{preface}
+\includeabstract{abstract}
+\includeabstractnl{abstractnl}
+
+% To create a list of abbreviations, there are 2 options
+% 1. manual creation of list of abbreviations and inclusion as a chapter
+%    \includeabbreviations{abbreviations}
+% 2. automatic generation via the glossary package
+%    \glossary{name=MD,description=molecular dynamics}
+% \myprintglossary
+
+% To create a list of symbols, there are 2 options
+% 1. include a manually created nomenclature as a chapter
+%    \includenomenclature{nomenclaturechapter}
+% 2. automatic generation via the nomencl package
+%    \nomenclature[cB]{$c_B(\vec{x})$}{Characteristic function of $B$}
+% \myprintnomenclature
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter % to get \pagenumbering{arabic}
+
+% Show instructions on a separate page
+\instructionschapters\cleardoublepage
+
+\includechapter{introduction}
+%\includechapter{intro2}
+%\includechapter{chapter1}
+%\includechapter{chapter2}
+%\includechapter{chapter3}
+%\includechapter{chapter4}
+%\includechapter{chapter5}
+\includechapter{conclusion}
+%\includechapter{futurework}
+%\includechapter{manual} % Remove this chapter
+
+% Insert here your own chapters
+% Chapters are expected to be in a tex-file with the given name dot
+% tex and in a directory with the given name in the chapters
+% directory.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\appendix
+
+%\includeappendix{myappendix}
+
+%\includeappendix{appendix1}\label{ap1}
+%\includeappendix{appendix2}\label{ap2}
+%\includeappendix{appendix3}\label{ap3}
+%\includeappendix{appendix4}\label{ap4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+\includebibliography
+\bibliographystyle{aa}
+\bibliography{allpapers}
+% BibLatex (comment lines above and comment out biblatex lines in preamble)
+%\printbibliography[title=\bibname]
+\instructionsbibliography
+
+%\includecv{curriculum}
+
+\includepublications{publications}
+
+\makebackcoverXII
+
+\end{document}
