@@ -1,17 +1,204 @@
 \chapter{Introduction}\label{ch:introduction}
 
+% Stars are the fundamental building blocks of the universe. Their evolution directly affects the evolution of their host galaxies, and in turn that of the universe. 
+
+Massive stars have initial masses larger than eight times the mass of our sun (M$_i \gtrsim 8$\,\Msun{}) and are fundamental cosmic engines. Through their strong stellar winds, intense radiation and powerful explosions, they dominate the transport of energy and momentum into the interstellar medium \citep[c.f.][]{mac_low_distribution_2005}. The final explosions of massive stars are so bright that they can be seen throughout the universe and allow the study of its properties across cosmic times \citep{tanvir_-ray_2009}. The first generation of massive stars are thought to have played a pivotal role in the assembly of the first galaxies \citep{bromm_first_2004,robertson_early_2010}. They are thought to be the progenitors of core-collapse supernovae (SN) and gamma-ray bursts \citep{woosley_supernova_2006}, the remnants of which are neutron stars (NS) and black holes (BHs). In binary systems, these BHs can undergo coalescence to produce gravitational waves (GWs).
+
+Despite their importance in a variety of astrophysical phenomena, there remain major uncertainties in our understanding of massive stellar evolution. Processes such as internal mixing, rotation, magnetic fields and multiplicity are few of the numerous parameters that strongly affect the mass, and hence evolution, of a star. In the past decades, observational surveys have shown that multiplicity is the rule, and not the exception, among massive OB-type stars \citep{mason_iccd_1998,mason_high_2009,sana_binary_2012,sana_vlt-flames_2013,sana_southern_2014,kobulnicky_toward_2014,barba_own_2014,dunstall_vlt-flames_2015,maiz_apellaniz_galactic_2016,maiz_apellaniz_monos_2019,almeida_tarantula_2017,banyard_observed_2022,villasenor_b-type_2021}. Most of the stars in these systems with interact with their companions \citep{fryer_constraints_2007,sana_binary_2012,sana_vlt-flames_2013,dunstall_vlt-flames_2015}, thereby fundamentally impacting the evolution of most of these systems \citep{pols_case_1994}. This thesis mainly addresses the aspect of multiplicity in a subset of massive stars, called Wolf-Rayet (WR) stars, from an observational standpoint. This chapter provides a brief introduction on stellar evolution, summarises the characteristics of WR stars, dives into the Galactic population of WR stars and provides the motivation for this thesis.
+
+\section{Stellar evolution in a nutshell}
+
+The birth of a star starts with a cold, dense molecular cloud. When a perturbation is applied to this cloud, say from a nearby supernova, parts of this cloud could undergo compression and gravitational collapse. This cloud could then undergo fragmentation, forming smaller clumps of dust that are the progenitors of single and multiple stars. The surrounding matter continues to fall onto each of these clumps, forming circumstellar disks through which accretion occurs. Even after the fragmentation process ends, the clumps of material continue to contract. This results in an increase in the central density, causing the central temperature to rise. As the material heats up, it radiates the energy away in the form of infrared radiation. The protostar continues to heat up and contract, dissociating molecular hydrogen into its atomic form. The star contracts and heats up until it is able to burn hydrogen in its core. When hydrogen burning becomes the dominant energy production in the star (as compared to contraction), the star is said to be entering its main-sequence phase. The star spends most of its lifetime on the main sequence, until all the hydrogen in its core is converted to helium through nuclear fusion. It will then go through a cycle of contraction and fusion of helium, carbon, etc. in its core.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapters/introduction/image/stars_lifecycle_full.jpeg}
+    \caption{Life cycle of a star. Left: evolution of a low-mass star like the sun. Right: evolution of a massive star ($M_i \gtrsim8\,$\Msun{}).}
+    \label{fig:lifecycle}
+\end{figure}
+ 
+The evolution from here on is governed by the initial mass of the star (Fig. \ref{fig:lifecycle}). Low mass stars $M_i \lesssim 8\,$\Msun{} will end up with a degenerate carbon/oxygen core where no further nuclear fusion can occur. These stars will end their lives as a carbon/oxygen white dwarf, shedding their outer envelope to form a planetary nebula. Stars with initial masses between 8 and 25\,\Msun{} will evolve past the main sequence and enter the red-supergiant (RSG) phase before ending their lives as Type Ia SN. Stars with initial masses more than 25\,\Msun{} may also go through the luminous blue variable (LBV) phase, where they may undergo eruptive mass loss. After the LBV/RSG phase, these stars will appear as WR stars. This phase is short-lived (${\sim}10$\% of the stellar lifetime) after which they end their lives either as Type Ib/c supernovae, leaving behind BHs, or through direct collapse \citep{heger_how_2003}.  
+ 
+%  On the other hand, massive stars with $M_i \gtrsim 8$\,\Msun{} will fuse carbon, oxygen and so on in their cores until they end up with a degenerate iron core. In the post main-sequence phase of their evolution, m
+
+\section{Wolf-Rayet stars}
+
+\textit{The content of this section is mainly based on \citet{crowther_physical_2007} and \citet{langer_presupernova_2012}.}
+
+A small subset of massive stars appear as WR stars. The class is named after French astronomers Charles Wolf and Georges Rayet in 1867, who observed and identified three stars in the constellation Cygnus whose spectra showed spectacularly broad and strong emission lines, particularly of He\,{\sc ii} $\lambda 4686$ and H-$\beta$. In the context of stellar evolution, WR stars are the progenitors of core-collapse SN and BHs, making their study quintessential in understanding the initial properties of such phenomena. 
+
+\subsection{Observational characteristics}
+
+Spectroscopically, WR stars appear in multiple ``flavours'' based on the chemical composition of their atmospheres: nitrogen-rich (WN), carbon-rich (WC), and the extremely rare oxygen-rich (WO) sequences (Fig. \ref{fig:spectypes}). Based on the strengths and ratios of various emission lines, WN and WC stars are also sub-classified as early (WNE: WN2-WN5, WCE: WC4-6) or late (WNL: WN6-WN9, WCL: WC7-9) following the convention from \citet{smith_revised_1968}. The spectral types of WN stars can be suffixed by `h' or `o' depending on the presence or absence of hydrogen in the spectra.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapters/introduction/image/Spectypes.png}
+    \caption{Model atmosphere spectra of WNE, WNL and WC sub-types from the Potsdam Wolf-Rayet code (PoWR). The various spectral lines are identified in black.}
+    \label{fig:spectypes}
+\end{figure}
+
+The optical emission-line spectra of WR stars are primarily constituted by recombination lines. The strength of these lines depend on the number of electrons and ions in the outflowing wind, and hence scale with the square of the density. This is why the spectral appearance of a WR and O star are drastically different, despite the density changing by only a factor of 10 or so. The high density in the wind also results in a high optical depth, such that the photosphere (hydrostatic layers) are hidden from sight. Therefore, the spectra of WR stars are formed in the geometrically-extended, fast-moving outflowing wind. As a result, it is challenging to obtain information about the stellar parameters through spectroscopic analysis, as this requires an in-depth understanding of the structure of the wind. 
+
+Like all massive stars, the winds of WR stars are clumpy \citep{puls_bright_2006,fullerton_discordance_2006}. This, along with other in inhomogeneities in the wind, result in the spectral lines of WR stars changing their appearance over time. Indeed, WR stars are notorious for their line-profile variability \citep{lepine_wind_1996,lepine_wind_2000,st-louis_systematic_2009,chene_systematic_2011,chene_clumping_2020}. The periodic change in the equivalent widths  and the full-width half maximum of line profiles has even led to speculations of a binary companion \citep[e.g. WR 1][]{morel_investigation_1999}. In the recent years, it has been shown that certain WR stars harbour large-scale structures that could cause such periodicity \citep[e.g.][]{st-louis_measuring_2008,st-louis_polarization_2018,aldoretta_extensive_2016}. The photometry of WR stars also shows quasi-periodic variability on short timescales \citep[e.g.][]{moffat_photometric_1986,balona_intensive_1989,st-louis_brite_2020}, which have been attributed to non-radial pulsations, co-rotating interaction regions (CIRs) or binary companions. 
+
+WR stars are usually found in isolated regions, although a fair fraction of them in the Galaxy are found in young clusters \citep{rosslowe_spatial_2015}. A small fraction of WR stars also have nebulae surrounding them, showing a variety of morphological features \citep{toala_wise_2015}. These nebulae are often associated with young WR stars, particularly WN sub-types, although some have been found around WC stars. The nebulae are a result of strong, UV radiation from the WR star interacting with and photo-ionizing the material ejected in a past RSG/LBV phase. 
+
+Since the WR phenomenon is defined by observational, spectroscopic characteristics, multiple objects come under the umbrella term. There are three main types of stars that are classified as WR stars:
+
+\begin{itemize}
+    \item \textbf{Classical WR stars:} these are hydrogen-depleted, helium-rich stars that are thought to be the descendants of main-sequence O stars with initial masses from 25\,\Msun{} and above. They are the progenitors of type-Ib,c supernovae. 
+    \item \textbf{Main-sequence WR stars:} stars with initial masses ${\sim}80\,$\Msun{} and higher have winds so strong that they can exhibit a WR-like appearance while burning hydrogen in their cores. They show lines of hydrogen in their spectra.
+    \item \textbf{Central stars of planetary nebulae:} as relatively massive post-ABG stars evolve into planetary nebulae, the inner core that is exposed is hot enough to drive strong winds, appearing as WR stars. These are often referred to as [WR] stars.
+\end{itemize}
+
+In this work, we refrain from discussing [WR] stars and focus on classical- and main-sequence WR stars.
+
+\subsection{Formation and evolution of WR stars}
+
+\textit{The content of this section is mainly from \citet{crowther_physical_2007} and \citet{shenar_why_2020}.}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{chapters/introduction/image/FormationChannels.png}
+    \caption{An illustration of the different formation channels through which WR stars can be formed. $M^{\textrm{WR}}_{\textrm{single}}$ is the minimum initial mass for a star to be able to strip itself via stellar winds. $M^{\textrm{WR}}_{\textrm{spec}}$ is the minimum initial mass required for a star to appear as a WR star \textit{after} being stripped. Figure adopted from \citet{shenar_why_2020} with stellar evolution models from BPASS.}
+    \label{fig:formation_wr}
+\end{figure}
+
+\citet{gamow_wc_1943} first suggested that the chemical composition of the spectra of WR stars showed the products of nuclear fusion in the core of massive O-type stars. For this to be possible, an O star had to shed its hydrogen-rich envelope somehow, increasing its effective temperature to the point where it could drive such strong stellar winds and reveal the products of nuclear fusion at the same time. An explanation was provided by \citet{paczynski_evolution_1967}, who explained that this was possible through mass-transfer in close binaries. This led to the initial claim that all WR stars were the product of binary interaction. Soon after this, Peter Conti hypothesised that a single, massive star could shed its hydrogen envelope through mass loss via its own stellar winds. As the star further evolved, first the products of hydrogen-burning (through the CNO-cycle, nitrogen) and then helium-burning (through the triple-alpha process, carbon) would be exposed. This came to be known as the ``Conti evolutionary scenario'' or simply the ``Conti scenario'' \citep{1976Conti}. This explanation become more popular as it did not require external help for an O star to evolve into a WR star. O stars can also lose mass through episodic outbursts due to instabilities \citep[e.g.][]{langer_towards_1994} or due to continuum driven instabilities \citep{smith_role_2006}.
+
+Ever since it was shown that the majority of O stars live in close binaries that will interact over the course of their lifetime \citep{sana_binary_2012,sota_galactic_2014}, the debate over the dominant mechanism through which the envelope of an O star is stripped is still ongoing \citep{vanbeveren_wr_1998,shenar_wolf-rayet_2019,shenar_why_2020}. Since the opacity required for the driving of stellar winds is dependent on metallicity, the mass-loss rates of massive stars decrease with reduced metallicity \citep{vink_mass-loss_2001,vink_metallicity_2005,hainich_wolf-rayet_2015,shenar_wolf-rayet_2019}. As a result, it was thought that envelope stripping by a companion is the major formation channel at lower metallicities \citep{maeder_new_1994,smith_mass_2014,groh_grids_2019}. For example, a star with an initial mass of 25\,\Msun{} can strip itself at solar metallicity, but this value increases to ${\sim}45\,$\Msun{} for the SMC \citep{meynet_stellar_2003,meynet_stellar_2005}. However, \citet{shenar_why_2020} have shown that while binary stripping might occur for most stars at lower metallicities, the resulting stars will not have strong enough stellar winds to appear as WR stars (Fig. \ref{fig:formation_wr}). 
+
+\section{WR stars in the Milky Way}
+
+\subsection{Observed distributions}
+
+Since WR stars have quite high temperatures (${\sim}100$-$200\,$kK), most of the emitted light is in the UV. This means that when deriving bolometric luminosities, large corrections are often required. To study the abovementioned evolutionary connections and formation scenarios, large samples of WR stars are required to draw statistically significant interpretations. The largest observed sample of Galactic WR stars is the VIIth catalogue of WR stars \citep[][henceforth \citetalias{van_der_hucht_viith_2001}]{van_der_hucht_viith_2001}. Given the high interstellar extinction in the Galaxy, a large number of WR stars are quite faint in the optical. However, they are bright in the infrared (IR) regime \citep{rosslowe_spatial_2015}, and hundreds have been found since \citep{mauerhan_12_2009,shara_near-infrared_2009,shara_near-infrared_2012,faherty_characterizing_2014,rosslowe_deep_2018}. Currently, the Galactic Catalogue of WR stars (v1.25) has 667 stars and is being maintained by Paul Crowther\footnote{http://pacrowther.staff.shef.ac.uk/WRcat/} \citep[][henceforth GCWR]{rosslowe_spatial_2015,rate_unlocking_2020}. The distribution of Galactic WR stars from the GCWR and \citetalias{van_der_hucht_viith_2001} over their spectral types is shown in Fig. \ref{fig:dist_spt}, with their distances inFig. \ref{fig:dist_dist}. The distances reported in the GCWR are, aside from individual reports, Gaia DR2 distances from \citet{rate_unlocking_2020}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapters/introduction/image/spt_dist.png}
+    \caption{Distribution of Galactic WR stars from \citetalias{van_der_hucht_viith_2001} and GWCR over their spectral types.}
+    \label{fig:dist_spt}
+\end{figure}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapters/introduction/image/dist_dist.png}
+    \caption{Distances to Galactic WR stars from \citetalias{van_der_hucht_viith_2001} and GWCR.}
+    \label{fig:dist_dist}
+\end{figure}
+
+For the population of single Galactic WR stars, the atmospheric-modelling work of \citet{hamann_galactic_2019} for WN stars and \citet{sander_galactic_2019} for WC stars has been significant. With distances from Gaia DR2, \citet{hamann_galactic_2019} confirmed that most WNL stars are slightly more luminous than WNE stars. \citet{sander_galactic_2019} also showed with Gaia DR2 distances that the luminosity and temperature of WC stars was, on average, similar to that of Galactic WNE stars. In their analysis, \citet{hamann_galactic_2019} also show that most, if not all, WNL stars contain hydrogen in their spectra. An updated evolutionary channel for single O stars to evolve into WR stars, based on their initial mass (modification to the Conti scenario) is given in \citet{sander_galactic_2019}. For $M_i > 80\,$\Msun{},
+
+\centerline{O $\longrightarrow$ Of/WNH $\longleftrightarrow$ LBV  [$\longrightarrow$ WNH] $\longrightarrow$ SN IIn,}
+
+for $35 \le M_i \le 80\,$ \Msun{}, 
+
+\centerline{O $\longrightarrow$ Of/WNH $\longleftrightarrow$ LBV  $\longrightarrow$ WN $\longrightarrow$ WC $\longrightarrow$ WO $\longrightarrow$ CC,}
+
+for $18 \le M_i \le 35\,$ \Msun{},
+
+\centerline{O $\longrightarrow$ RSG $\longrightarrow$ WNL [$\longleftrightarrow$ LBV] $\longrightarrow$ WN $\longrightarrow$ WC $\longrightarrow$ WO $\longrightarrow$ CC,}
+
+and for $8 \le M_i \le 18\,$ \Msun{},
+
+\centerline{OB $\longrightarrow$ RSG [$\longrightarrow$ BSG] $\longrightarrow$ SN II}
+
+where `CC' indicates core-collapse. The mass ranges above are not set in stone, and they are derived by comparing empirically derived luminosities to stellar evolution models. 
+
+% By nature of the initial mass function (IMF), classical WR stars are therefore mostly descendants of stars with initial masses in the range 25-75\,\Msun{}, and are usually hydrogen-free. However, there are a few classical WR stars that show lines of hydrogen in their spectra (e.g. WR 3). A large fraction of WNh stars are of spectral types WNL, and are main-sequence stars. 
+
+\subsection{Observed multiplicity properties}
+
+% Numerous spectroscopic and imaging surveys have shown that the companion fraction of massive stars is high \citep[compilation by][]{2017moedistefano}. By investigating O stars in young, Galactic clusters, \citet{2012sana} computed that around half of O stars will interact with a companion over the course of their lifetime. This has drastic implications for the evolution of the star, while raising questions about the dominant evolutionary channel leading to the formation of WR stars. 
+
+When trying to understand the evolution of a binary system, it is important to define the orbital parameters: the period $P$, eccentricity $e$, inclination $i$, mass-ratio ($q=M_1/M_2$), etc. Based on the evolution of the individual stars, these parameters will change over the course of their lifetimes. Studying these parameters is a convenient way to analyse if binary systems interact, merge or become unstable. While there are a lot more parameters to work with (as compared to single stars), binary systems offer the benefit of being able to measure the minimum masses of the individual components through Kepler's laws. This is extremely beneficial in the context of WR stars, since these direct measurements of dynamical mass and radius are guidestones in the process of modelling these objects. Aside from these quantities, of importance is the period distribution of the WR binary population, which help calibrate the physics of binary interaction in population syntheses codes. 
+
+The observed fraction of Galactic WR stars in binaries was reported to be ${\sim}0.4$ by  \citetalias{van_der_hucht_viith_2001}. This fraction is based on a compilation of 227 WR stars, of which 87 are of the WC sub-type, 127 WN stars, 10 WN/WC stars. This includes very-long and extremely-long period binaries ($P>1000\,$d), and binaries identified through different methods (e.g. spectroscopy, visual binaries, photometry). Without going into too much detail, we can also examine the observed multiplicity at different metallicities. Through spectroscopic surveys, the multiplicity fraction of WR stars in the Large and Small Magellanic Clouds (LMC and SMC) were found to be ${\sim}0.3$ and ${\sim}0.4$ respectively \citep{bartzakos_magellanic_2001,foellmi_wolf-rayet_2003,foellmi_wolf-rayet_2003-1,schnurr_spectroscopic_2008}. At higher metallicities, \citet{neugent_close_2014} found that in the galaxies M31 and M33, the fraction of WR stars in short period binaries was ${\sim}0.3$.  Although the number of WR stars in these galaxies are lower than those in our own, the observed binary fraction seems to be independent of metallicity. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapters/introduction/image/Cumulative_pobs_withdust.pdf}
+    \caption{Observed period distribution of Galactic WC and WN binaries from \citetalias{van_der_hucht_viith_2001}.}
+    \label{fig:obs_pdist}
+\end{figure}
+
+Returning our attention to the Galactic population, the stars in the GCWR have not been examined for binarity in a homogeneous manner. Due to the incompleteness, we scrutinise the cumulative orbital period distribution from \citetalias{van_der_hucht_viith_2001} (Fig. \ref{fig:obs_pdist}). It is clear that the period distribution of Galactic WC binaries is skewed towards longer periods. While ${\sim}60$\% of WN binaries have orbital periods less than 10 days, the equivalent fraction for the WC binaries is only reached at orbital periods of ${\sim}$1000 days. An important distinction to highlight here is the lack, and not absence, of short-period (10-100\,d) WC binaries when compared with the Galactic WN population. This is somewhat surprising, since short-period WR binaries should be the easiest to detect, given the large Doppler motion. 
+
+\textbf{Detecting Wolf-Rayet binaries}
+
+Apart from orbital analysis, there are a multitude of techniques used to identify WR binaries. The first is the dilution of emission lines. If a WR star is in a binary with an OB companion, the strength of the WR emission is theoretically diluted by the light from the companion. This was a common technique used to flag potential binary candidates. The problem with this issue is that if the companion is contributing significantly enough to dilute the spectrum, it should also show up in the form of absorption lines.
+
+This brings us to the second technique, identifying absorption lines in the spectrum. This is a common technique used when it is difficult to obtain multi-epoch data on WR stars. A high signal-to-noise, high resolution spectrum is often enough to detect absorption lines from a companion. 
+
+In WR stars that have strong line-profile variability, a technique to measure periodicity was through the equivalent widths of particular spectral lines. However, the interpretation of this periodicity could be co-rotating interaction regions, other large-scale structures in the wind, non-radial pulsations or an embedded neutron star/low-mass object in the wind of the WR star. 
+
+Spectroscopic binaries are a foolproof way of detecting binarity. The anti-phase motion of spectral lines is a sure sign of binarity. This can be either SB1 (only one component detected in the spectra) or SB2 systems. 
+
+Another technique used to monitor long-period WR binaries is in the infrared. WC stars are episodic dust makers, and the commonly accepted theory is that the WR\,+\,OB binary develops the right conditions to produce dust at periastron passage. These usually require decades of monitoring. 
+
+Lastly, extremely-long period binaries can be detected via imaging, or via non-thermal radio excess. 
+
+\subsection{Correction for observational biases} 
+
+Observational studies to determine the multiplicity have biases, depending on the method. For spectroscopy, the quantitative measurement that indicates if a star is part of a multiple system or not is the radial velocity (RV). If the star is in a binary system with parameters $P$, $i$, $e$ and $q$, then one would expect a velocity shift in spectral lines due to the Doppler effect based on the parameters of the system. Given a spectroscopic monitoring campaign of length, the measured RV amplitude (\DelRV{}) for this binary system depends on its parameters. In a spectroscopic campaign, it is not always known if the star is a binary, let alone these parameters. Therefore, the measured \DelRV{} suffers from a bias that must be corrected for. For example, if the eccentricity of the binary were $e=0.7$ and the observations were carried out when the binary was away from the time of periastron passage, then the RV amplitude measured would be small, and the system would then be classified as a single star.
+
+Apart from the systemic parameters, the observational bias also depends on the sample selection, instrument, data reduction techniques and analytic tools used. For an agglomeration of WR stars analysed with various techniques, correcting for the observational biases is not trivial whatsoever. Therefore, even though the observed multiplicity properties from \citetalias{van_der_hucht_viith_2001} are an extremely valuable first step towards understanding the binary population of Galactic WR stars, the intrinsic multiplicity properties are unfortunately out of reach. 
+
+\section{Motivation and outline of this thesis}
+
+There are numerous uncertainties that plague our understanding of massive-star evolution. Some of them include rotation, internal mixing, mass loss, binary interaction and magnetic fields. Handling all of this in a one-dimensional stellar evolution code only compounds the problem, as a deviation from spherical symmetry can be reached with more than one of the above parameters. As it is the post-main sequence phase of stellar evolution, the WR phase acts like a magnifying glass, highlighting the effects of these uncertainties. Studying the population of WR stars in a statistically significant manner provide an anchor point for stellar evolution models, using which we can work towards mitigating the shortcomings in our current knowledge. Additionally, WR stars are also progenitors of black holes, either via core-collapse SN or through direct collapse. The mass, multiplicity fraction and orbital configurations of WR stars directly give us insight on the future population of GW progenitors. Moreover, WR stars are suspected to be progenitors of GRBs, and the multiplicity properties of the WR population might help in understanding more about this phenomenon. 
+
+With this in mind, the following questions are of interest to us: what fraction of Galactic WR stars reside in binaries? What are the orbital configurations of these binaries? Do they give us insight into past events of binary interaction from the main-sequence phase (e.g. mergers, ejections)? Is the observed discrepancy in the orbital period distribution between WN and WC stars real, or is it simply a bias? What is the effect of multiplicity on the Conti scenario?
+
+To attempt and constrain the intrinsic multiplicity properties of Galactic WR stars, we undertook a homogeneous spectroscopic monitoring campaign using the HERMES spectrograph mounted on the Mercator telescope on La Palma. From 2017-2021, we monitored 39 northern WR stars and obtained at least six epochs, and calculated the observer multiplicity fraction. We then corrected this fraction for observational biases and obtained the intrinsic multiplicity properties of the Galactic WR population. 
+
+In chapter 2, we introduce the instrument and data reduction techniques used in a homogeneous fashion. We developed an additional reduction scheme on top of the standard HERMES pipeline to correct for the instrumental response, and used continuum models to normalise the spectra. 
+
+In chapter 3, we focus on the pilot study of 12 WC stars, where the methods in Chapter 2 were applied. We use cross-correlation to measure RVs, after which we identify the observed binary fraction. We then use Monte-Carlo simulations to quantify the detection probability in our sample across the relevant parameter space, and apply a correction for observational biases.
+
+In chapter 4 we apply the above techniques to analyse a sample of 16 WNE stars. We develop a Bayesian framework around Monte-Carlo simulations, using which we calculated the power-law index, the upper and lower bounds of the period distribution along with the intrinsic multiplicity fraction of the WNE population. We re-visited the WC population and used these improved simulations to confirm what is observed in the literature, i.e. a lack of short period binaries. We compare what is obtained to main sequence O stars and discuss possible evolutionary consequences.
+
+In chapter 5 we round off our sample by analysing 11 WNL stars. We discover that the multiplicity properties are similar to those of the WNE population and run simulations for the combined WN population. After reconstructing the period distribution, we confirm that the addition of the WNL sample further strengthens our conclusions. We discuss possible binary evolutionary channels that could link the O, WN and WC populations and reproduce their multiplicity properties. 
+
+Finally, chapter 6 summarises the work completed in this thesis and discusses the way forward for the binary population of WR stars. 
+ 
+
+%WR plus compact companion candidates have also been identified in external galaxies, IC 10 X–1 (Bauer & Brandt 2004) and NGC 300 X-1 (Carpano et al. 2007).
+
+
+
+% In particular, massive stars with initial masses M$_i \gtrsim 8$\,\Msun{} are rare \citep{}, live short lives \citep{} and 
+
+% die with spectacular explosions called core-collapse supernovae \citep{}. 
+
+% Massive stars possess strong radiation-driven stellar winds \citep{cak1975} and are quite luminous, through which they affect the evolution of their host galaxies in numerous ways. They can trigger or inhibit star formation \citep{}, invest energy and angular momentum into the surrounding interstellar medium \citep{} and are the progenitors of neutron stars and black holes (BHs). They are also thought to be the progenitors for long-duration gamma-ray bursts (GRBs ??). 
+
+% Based on their initial mass, the Conti scenario has been slightly modified to reflect different evolutionary scenarios involving WR stars. For $M_i \gtrsim 75\,$\Msun{},
+
+% \centerline{O $\xrightarrow{}$ WN (H-rich) $\xrightarrow{}$ LBV $\xrightarrow{}$ WN (H-poor) $\xrightarrow{}$ WC $\xrightarrow{}$ SN Ic,}
+
+% whereas for ${\sim}40 \le M_i \le 75\,$ \Msun{}, 
+
+% \centerline{O $\xrightarrow{}$ LBV $\xrightarrow{}$ WN (H-poor) $\xrightarrow{}$ WC $\xrightarrow{}$ SN Ic,} 
+
+% and for ${\sim}25 \le M_i \le 40\,$ \Msun{},
+
+% \centerline{O $\xrightarrow{}$ LBV/RSG $\xrightarrow{}$ WN (H-poor) $\xrightarrow{}$ SN Ib.}
+
+% By nature of the initial mass function (IMF), classical WR stars are therefore mostly descendants of stars with initial masses in the range 25-75\,\Msun{}, and are usually hydrogen-free. However, there are a few classical WR stars that show lines of hydrogen in their spectra (e.g. WR 3). A large fraction of WNh stars are of spectral types WNL, and are main-sequence stars.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\textwidth]{chapters/introduction/image/WR135.png}
+%     \caption{Optical spectrum of WR 135, one of the three Wolf-Rayet stars that were part of the initial discovery. The continuum level is indicated by the solid blue line.}
+%     \label{fig:intro_wr135}
+% \end{figure}
+
+
+
 
 \cleardoublepage
-
-- Massive stars in the context of astronomy and astrophysics
-- - the importance of massive stars
-  - inject energy and angular momentum through end-of-life explosions such as core-collapse supernovae
-  - drive the evolution of galaxies
-  - can trigger or inhibit star formation
-  - progenitors of BH and NS.
-
-- Binarity in massive stars
-
-- Wolf-Rayet stars
-
-As they evolve, massive stars with M$_i \gtrsim 30\,$\Msun{} will strip their outer envelope either through sufficient mass loss via stellar winds or through mass transfer onto a binary companion star. The contribution of each formation channel is still widely debated \citep{}
