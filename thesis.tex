@@ -115,6 +115,7 @@
 \usepackage{subfig}
 \usepackage{epsfig}
 \usepackage{array}
+\usepackage{mdframed}
 \usepackage{graphicx,xcolor,textpos}
 \usepackage{ragged2e}
 \usepackage{romanbar}
@@ -123,11 +124,22 @@
 \usepackage[utf8]{inputenc}
 \DeclareUnicodeCharacter{2212}{-}
 \usepackage{gensymb}
+\usepackage[flushleft]{threeparttable}
+\usepackage{caption,dcolumn}
+\newcolumntype{d}[1]{D..{#1}}
+\newcommand\MC[1]{\multicolumn{1}{c}{#1}} 
 \DeclareUnicodeCharacter{00A0}{~}
 \bibpunct{(}{)}{;}{a}{}{,}
 
 \newcommand{\K}[1]{\textcolor{black}{#1}} %Comments Karan
 \renewcommand{\labelitemi}{$\diamond$}
+
+\newmdenv[
+linecolor=gray,leftmargin=60,%
+rightmargin=40,
+backgroundcolor=gray!40,%
+innertopmargin=0pt,%
+]{abs}
 
 \usepackage{tabularx}
 \usepackage{hyperref}
@@ -159,23 +171,38 @@
 \newcommand{\NIV}{N\,{\sc iv}\,$\lambda 4058$}
 \newcommand{\HeII}{He\,{\sc ii}\,$\lambda 4686$}
 \newcommand{\NIVred}{N\,{\sc iv} $\lambda \lambda \lambda 7103, 7109, 7123$}
-\newcommand{\niv}{N\,{\sc iv}}
-\newcommand{\nv}{N\,{\sc v}}
-\newcommand{\heii}{He\,{\sc ii}}
 
 \newcommand{\Pmin}{$P_\mathrm{min}$}
 \newcommand{\Pmax}{$P_\mathrm{max}$}
 \newcommand{\logPmin}{$\log P_\mathrm{min}$}
 \newcommand{\logPmax}{$\log P_\mathrm{max}$}
+\newcommand{\logPminWNL}{$\log P_\mathrm{min}^{\textrm{WNL}}$}
+\newcommand{\logPmaxWNL}{$\log P_\mathrm{max}^{\textrm{WNL}}$}
+\newcommand{\logPmaxWNE}{$\log P_\mathrm{max}^{\textrm{WNE}}$}
+\newcommand{\logPminWNE}{$\log P_\mathrm{min}^{\textrm{WNE}}$}
+\newcommand{\logPmaxWN}{$\log P_\mathrm{max}^{\textrm{WN}}$}
 
 \newcommand{\fobsWNE}{$f_{\textrm{obs}}^{\textrm{WNE}}$}
 \newcommand{\fobsWNL}{$f_{\textrm{obs}}^{\textrm{WNL}}$}
 \newcommand{\fobsWC}{$f_{\textrm{obs}}^{\textrm{WC}}$}
+\newcommand{\fobsWN}{$f_{\textrm{obs}}^{\textrm{WN}}$}
 
+\newcommand{\fintWN}{$f_{\textrm{int}}^{\textrm{WN}}$}
 \newcommand{\fintWNE}{$f_{\textrm{int}}^{\textrm{WNE}}$}
 \newcommand{\fintWNL}{$f_{\textrm{int}}^{\textrm{WNL}}$}
 \newcommand{\fintWC}{$f_{\textrm{int}}^{\textrm{WC}}$}
 \newcommand{\DelRV}{$\Delta$RV}
+\def\piWNL{$\pi^{\textrm{WNL}}$}
+\def\piWNE{$\pi^{\textrm{WNE}}$}
+\def\piWN{$\pi^{\textrm{WN}}$}
+\def\piWC{$\pi^{\textrm{WC}}$}
+
+\newcommand{\niv}{N\,{\sc iv}}
+\newcommand{\niii}{N\,{\sc iii}}
+\newcommand{\nv}{N\,{\sc v}}
+\newcommand{\heii}{He\,{\sc ii}}
+
+\def\sigRV{$\sigma_{\textrm{RV}}$}
 
 % \usepackage{caption}
 % Journal name abbreviations
@@ -241,9 +268,9 @@
 
 \frontmatter % to get \pagenumbering{roman}
 
-\includepreface{preface}
-\includeabstract{abstract}
-\includeabstractnl{abstractnl}
+% \includepreface{preface}
+% \includeabstract{abstract}
+% \includeabstractnl{abstractnl}
 
 % To create a list of abbreviations, there are 2 options
 % 1. manual creation of list of abbreviations and inclusion as a chapter
@@ -260,8 +287,8 @@
 % \myprintnomenclature
 
 \tableofcontents
-\listoffigures
-\listoftables
+% \listoffigures
+% \listoftables
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -271,12 +298,12 @@
 \instructionschapters\cleardoublepage
 
 \includechapter{introduction}
-%\includechapter{intro2}
-%\includechapter{chapter1}
-%\includechapter{chapter2}
-%\includechapter{chapter3}
+\includechapter{data_reduction}
+\includechapter{WC}
+\includechapter{WNE}
+\includechapter{WNL}
 %\includechapter{chapter4}
-%\includechapter{chapter5}
+% \includechapter{chapter5}
 % \includechapter{conclusion}
 %\includechapter{futurework}
 %\includechapter{manual} % Remove this chapter
@@ -288,14 +315,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\appendix
+\appendix
 
 %\includeappendix{myappendix}
 
 %\includeappendix{appendix1}\label{ap1}
 %\includeappendix{appendix2}\label{ap2}
-%\includeappendix{appendix3}\label{ap3}
-%\includeappendix{appendix4}\label{ap4}
+\includeappendix{appendix3}\label{ap3}
+\includeappendix{appendix4}\label{ap4}
+\includeappendix{appendix5}\label{ap5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
