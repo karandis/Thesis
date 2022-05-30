@@ -4,11 +4,11 @@
 
 \textbf{MELCHIORS: The Mercator Library of High Resolution Stellar Spectroscopy}
 
-P. Royer, \textbf{K. Dsilva}, T. Merle, S. Sekaran, H. Van Winckel, Y. Fr\'emat, M. Laverick, M. Abdul Masih, B. Acke, M.L. Alonso, S. Bandhu Mahoto, P. Beck, N. Behara, S. Bloemen, B. Buysschaert, N. Cox, J. Debosscher, P. De Cat, P. Degroote, R. De Nutte, K. De Smedt, B. de Vries, L. Dumortier, A. Escorza Santos, K. Exter, S. Goriely, N. Gorlova, H. Hensberghe, M. Hillen, W. Homan, M. Hrudkova, D. Kamath, R. Karjalainen, P. Lampens, R. Lombaert, P. Marcos Arenal, J. Menu, F. Merges, E. Moraweji, P. Nemeth, P. Neyskens, R. Ostensen, P. Papics, J. Perez, S. Prins, A. Samadi, A. Sana, A. Sans Fuentes, S. Scaringi, V. Schmid, L. Siess, C. Siopis, K. Smolders, S. Sodor, A. Thoul, A. Tkachenko, S. Triana, B. Vandenbussche, M. Van der Swaelmen, M. Van de Sande, G. Van De Steene, S. Van Eck, P. van Hoof, A.J. Van Marle, T. Van Reeth, L. Vermeylen, D. Volpi, J. Vos and C. Waelkens
+P. Royer, \textbf{K. Dsilva}, T. Merle, S. Sekaran, H. Van Winckel, Y. Fr\'emat, M. Laverick, M. Abdul Masih, B. Acke, M.L. Alonso, S. Bandhu Mahoto, P. Beck, N. Behara, S. Bloemen, B. Buysschaert, N. Cox, J. Debosscher, P. De Cat, P. Degroote, R. De Nutte, K. De Smedt, B. de Vries, L. Dumortier, A. Escorza Santos, K. Exter, S. Goriely, N. Gorlova, H. Hensberghe, M. Hillen, W. Homan, M. Hrudkova, D. Kamath, R. Karjalainen, P. Lampens, R. Lombaert, P. Marcos Arenal, J. Menu, F. Merges, E. Moraweji, P. Nemeth, P. Neyskens, R. Ostensen, P. Papics, J. Perez, S. Prins, A. Samadi, H. Sana, A. Sans Fuentes, S. Scaringi, V. Schmid, L. Siess, C. Siopis, K. Smolders, S. Sodor, A. Thoul, A. Tkachenko, S. Triana, B. Vandenbussche, M. Van der Swaelmen, M. Van de Sande, G. Van De Steene, S. Van Eck, P. van Hoof, A.J. Van Marle, T. Van Reeth, L. Vermeylen, D. Volpi, J. Vos and C. Waelkens
 
 Soon to be submitted to Astronomy \& Astrophysics
 
-\textbf{Author contributions:} K. Dsilva developed the telluric correction and implemented the instrumental response correction for the HERMES pipeline, with guidance and regular discussions with H. Sana, P. Royer and H. Van Winckel. S. Sekaran and T. Merle obtained models for the spectrophotometric standards. All other co-authors conducted a significant amount of observations for the spectral library with the HERMES spectrograph. 
+\textbf{Author contributions:} The campaign and the assembly of the library was led by P. Royer. K. Dsilva developed the telluric correction and implemented the instrumental response correction for the HERMES pipeline, with guidance and regular discussions with H. Sana, P. Royer and H. Van Winckel. S. Sekaran and T. Merle obtained models for the spectrophotometric standards. All other co-authors conducted a significant amount of observations for the spectral library with the HERMES spectrograph. 
 
 \section{Introduction}
 
@@ -77,7 +77,7 @@ To correct for the atmospheric extinction $A^e$, a wavelength and airmass-depend
 
 To correct for the telluric line absorption $A^m$, we use the publicly available tool Molecfit \citep{smette_molecfit_2015,kausch_molecfit_2015}. By combining essential input from the Mercator meteo-station with a molecular line database and a radiative transfer code, Molecfit models the instrument line spread function and atmospheric content at the time of the observation. The wavelength ranges and molecules included in the fitting procedure are listed in Table\,\ref{tab:molecfitranges}. For every region included in the fit, the continuum is estimated locally using a first order polynomial. Molecfit also corrects for any minor wavelength shifts by fitting the wavelength solution with a second order Chebyshev polynomial. 
 
-After correction, the spectra show residuals of $\sim\!\!5\%$ (Fig. \ref{}) of the continuum in the telluric bands, with the exception of the saturated lines. While fitting saturated lines, the division of two numbers close to zero often results in large residuals (the oxygen band around $7600\,$\r{A}, is often impacted this way). In the region after $8950\,$\r{A} we observe residuals due to a small imperfection of the wavelength calibration solution at the red edge of the spectra (Fig. \ref{}).
+After correction, the spectra show residuals of $\sim\!\!5\%$ (Fig. \ref{fig:tell_corr_7227}) of the continuum in the telluric bands, with the exception of the saturated lines. While fitting saturated lines, the division of two numbers close to zero often results in large residuals (the oxygen band around $7600\,$\r{A}, is often impacted this way). In the region after $8950\,$\r{A} we observe residuals due to a small imperfection of the wavelength calibration solution at the red edge of the spectra (Fig. \ref{fig:tell_corr_8940}).
 
 \begin{figure}
     \centering
@@ -90,7 +90,7 @@ After correction, the spectra show residuals of $\sim\!\!5\%$ (Fig. \ref{}) of t
     \centering
     \includegraphics[width=\hsize]{chapters/data_reduction/image/tell_corr_8940_8970.pdf}
     \caption{Telluric correction of WR 136 (WN6b(h)) in the region 8940\,\r{A} to 8970\,\r{A}. The uncertain wavelength calibration causes residuals of the order  20\%.}
-    \label{fig:tell_corr}
+    \label{fig:tell_corr_8940}
 \end{figure}
 
 \begin{figure}[!ht]
@@ -130,7 +130,7 @@ One spectrophotometric standard was observed every night when possible as part o
 The result of the division of the calibrator spectrum by the model in Eq.~\ref{eqn:hatre} is first smoothed with a median filter and then fit with a spline in order to produce a smooth, yet accurate representation of the effective response ($\hat{\Re}$) before injecting it in Eq.~\ref{eqn:Sfinal}, hence avoiding the introduction of noise resulting from the observation of the calibration star or local residuals from its model in the corrected spectra. The density of knot points used to fit the spline are chosen locally depending on the complexity of the response (bottom panel of Fig. \ref{fig:respDerivation}). All spectra obtained over the corresponding night are then divided by this response, resulting in a reliable representation of the continuum shape. 
 In a few cases where a spectrophotometric standard was not observed, the effective response derived for the nearest night in time was then used instead. It is important to note that the shape of the flat-field affects the effective response. This change in the $FF_{SED}$ depends on the temperature of the lamps, which is not monitored. Hence, we have no control over the applicability of a given response (derived from another night) to a given night. As a result, a few of the response corrections are inaccurate on such nights, leaving characteristic low-frequency signatures in the spectra. 
 
-The output of the response correction for our sample are HERMES spectra of WR stars whose shapes represent their SEDs. Although they are not flux-calibrated, we are able to use continuum models to normalise these spectra. In the Chapters 3, 4 and 5, we will use this technique to reduce all of our observations. 
+The output of the response correction are HERMES spectra whose shapes represent the star's SED. Although the spectra are not flux-calibrated, we are able to use continuum models to normalise these spectra. In the Chapters 3, 4 and 5, we will use this technique to reduce all of our observations of WR stars. Furthermore, the calibration techniques presented in this chapter have been deployed and applied to the entire HERMES archive (3258 spectra, 478 nights) in the context of an upcoming data release of the Mercator Library of High-Resolution Stellar Spectroscopy (Royer, Dsilva et. al in prep). 
 
 %\textbf{(2539/3259 for when we have meteo data $\geq$2010-09-27, double checked with STDNIGHT)}.
 %Correcting a spectrum with a response estimated from the wrong family produces characteristic features in the corrected spectra, allowing to design a new selection criterion for the effective response, now taken from 'the nearest night from the same family'.
