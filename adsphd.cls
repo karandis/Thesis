@@ -1697,14 +1697,13 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
 \mbox{}
 \vfill
 {\footnotesize\sffamily{\setlength{\parindent}{0ex}
-\textbf{Cover design credit:} Fabian Bodensteiner}} \\\\
+\textbf{Cover design credit:} }} \\\\
 
-%\textbf{Cover photo credit:} P\'{e}ter I. Pápics}}\\\\
 
 
 
 {\footnotesize\sffamily{\setlength{\parindent}{0ex}
-\textbf{Acknowledgements:} This research has been funded by the Fonds voor Wetenschappelijk Onderzoek Vlaanderen (FWO) under contract G075916N and under grant number V434818N. This work is based on observations carried out with the Flemish Mercator Telescope at the Spanish Observatorio del Roque de los Muchachos (ORM, La Palma, Spain), and the 1.54~m Danish telescope and the Swiss 1.2~m telescope at the European Southern Observatory (ESO, La Silla, Chile). This work has made use of data from the European Space Agency (ESA) mission \textit{Gaia}, processed by the Gaia Data Processing and Analysis Consortium (DPAC), and funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has also made use of the SIMBAD database, operated at CDS, Strasbourg, France.}}\\\\
+\textbf{Acknowledgements:} This research has been funded with funds from the European Research Council (ERC) through the CoG MULTIPLES under European Union's Horizon 2020 research programme (grant agreement No. 772225). This work is based on observations carried out with the Flemish Mercator Telescope at the Spanish Observatorio del Roque de los Muchachos (ORM, La Palma, Spain). This research has also made use of the SIMBAD database, operated at CDS, Strasbourg, France.}}\\\\
 
 \medskip
 
