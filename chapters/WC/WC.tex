@@ -1,4 +1,4 @@
-\chapter{Multiplicity of the carbon-rich Wolf-Rayet population} \label{ch:wc}
+\chapter{Multiplicity properties of the carbon-rich Wolf-Rayet population} \label{ch:wc}
 
 \textit{The work presented in this chapter is based on:}
 
@@ -42,24 +42,24 @@ Our sample was selected from the GCWR and includes all WC stars with $V$ $\leq$ 
 \end{figure}
 %####################################################################
 \subsection{Observations}
-For all but one of the 12 objects, at least six epochs were obtained over the course of 15 months. Table \ref{tab:epochs} gives the an overview of the campaign (including archival HERMES data). The number of epochs for WR 137 is larger because we obtained an additional 16 epochs with a high cadence over 15 days, with three observations over the same night to investigate the effect of short-term atmospheric or wind variability on the measured RVs (Sect. \ref{sect:wind-var}). 
+For all but one of the 12 objects, at least six epochs were obtained over the course of 15 months. Table \ref{tab:epochs} gives the an overview of the campaign (including archival HERMES data). The number of epochs for WR 137 is larger because we obtained an additional 16 epochs with a high cadence over 15 days, with three observations over the same night to investigate the effect of short-term atmospheric or wind variability on the measured RVs (Sect. \ref{sect:wind-var}).
 %####################################################################
 \begin{table}
 \centering
 \caption{Sample of WC stars in the RV monitoring campaign with the number of spectra, time coverage, and average S/N per resolution element at 5200\,\r{A}.}
 \begin{tabular}{cccc}
 \hline \hline
-WR\# & Spectra & Time coverage (d) & S/N @ 5200\,\r{A} \\ \hline 
-4 & 22 & 891 & 62 \\ 
-5 & 7 & 718 & 59 \\ 
-111 & 8 & 742 & 157 \\ 
-113 & 9 & 728 & 116 \\ 
-117 & 4 & 488 & 7 \\ 
-119 & 7 & 821 & 32 \\ 
+WR\# & Spectra & Time coverage (d) & S/N @ 5200\,\r{A} \\ \hline
+4 & 22 & 891 & 62 \\
+5 & 7 & 718 & 59 \\
+111 & 8 & 742 & 157 \\
+113 & 9 & 728 & 116 \\
+117 & 4 & 488 & 7 \\
+119 & 7 & 821 & 32 \\
 135 & 16 & 2660 & 166 \\
 137 & 28 & 2654 & 175 \\
 140 & 13 & 2681 & 203 \\
-143 & 6 & 76 & 33 \\ 
+143 & 6 & 76 & 33 \\
 146 & 8 & 847 & 8 \\
 154 & 4 & 24 & 48 \\ \hline
 \end{tabular}
@@ -82,14 +82,14 @@ To normalise these spectra, pseudo-continuum regions were chosen based on normal
 \section{Radial velocity determination}
 \label{sect:RVdet}
 
-In order to derive RVs for broad WR emission lines in a systematic manner, one needs a method that can be applied to most, if not all, of the objects in our sample and that yields meaningful errors. The uncertainty on each measurement will have contributions from different sources: statistical (based on the method and S/N), systematic (instrumental and normalisation), and intrinsic (variability in spectral lines). It is important to have reliable estimates of the uncertainties affecting the RV measurements as these will directly propagate into the observational bias correction. For binary systems, an upper limit on the RV measurement uncertainties can be estimated by measuring the dispersion in the residuals after fitting an orbit. However, the very long periods involved do not allow us to use this. 
+In order to derive RVs for broad WR emission lines in a systematic manner, one needs a method that can be applied to most, if not all, of the objects in our sample and that yields meaningful errors. The uncertainty on each measurement will have contributions from different sources: statistical (based on the method and S/N), systematic (instrumental and normalisation), and intrinsic (variability in spectral lines). It is important to have reliable estimates of the uncertainties affecting the RV measurements as these will directly propagate into the observational bias correction. For binary systems, an upper limit on the RV measurement uncertainties can be estimated by measuring the dispersion in the residuals after fitting an orbit. However, the very long periods involved do not allow us to use this.
 
-In this study, we focus solely on RV measurements of WR stars. In the case of SB2 binaries (i.e. double-lined spectroscopic binaries), it is, in principle, also possible to measure the RVs of the secondary star (typically an OB-type star). However, as the goal of our current study is binary detection rather than orbital analysis, there is little advantage in doing so. The WR component, being typically the lighter component, would exhibit larger RV amplitudes than its OB-type companion. Moreover, applying additional binary-criteria to SB2 binaries would require us to introduce non-trivial adjustments to our bias correction (see Sect. \ref{subs:intMulProp}). 
+In this study, we focus solely on RV measurements of WR stars. In the case of SB2 binaries (i.e. double-lined spectroscopic binaries), it is, in principle, also possible to measure the RVs of the secondary star (typically an OB-type star). However, as the goal of our current study is binary detection rather than orbital analysis, there is little advantage in doing so. The WR component, being typically the lighter component, would exhibit larger RV amplitudes than its OB-type companion. Moreover, applying additional binary-criteria to SB2 binaries would require us to introduce non-trivial adjustments to our bias correction (see Sect. \ref{subs:intMulProp}).
 
 In all cases, the estimation of uncertainties depends on the method used to measure the RVs. In the case of Gaussian fitting, the errors on the RV measurements are usually derived using the co-variance matrix of the least-squares fit. Cross-correlation relies on applying a peak-finding algorithm to the cross-correlation function (CCF), which can be a Gaussian, Lorentzian, parabola or, a sinc function \citep[e.g.][]{tody_iraf_1993}. Another approach is to find the bisector of the CCF. The errors are derived based on the width, number of pixels, height of the CCF peak, and the anti-symmetric noise \citep{tonry_survey_1979}. When measured for WR stars with low-resolution spectra, the errors are magnified by the low number of pixels around a broad CCF peak. In this work, we use a different statistical formulation for the CCF that represents it as a log-likelihood function. The latter is then maximised and fit with a parabola. This is explained in detail below.
-%#################################################################### 
+%####################################################################
 \subsection{Cross-correlation}
-The method that we used for the cross-correlation is based on \citet{zucker_cross-correlation_2003}. The method, assumptions and limitations are briefly discussed here. For a more thorough derivation we refer to \citet{zucker_cross-correlation_2003}. The observed spectrum is denoted by $f(n)$ and is assumed to be Doppler shifted with respect to the `template' of zero-shift, denoted by $g(n)$. Both the spectrum and the template are described as a function of pixel, $n$, such that a Doppler shift results in a uniform, linear shift in the spectrum \citep{tonry_survey_1979}. 
+The method that we used for the cross-correlation is based on \citet{zucker_cross-correlation_2003}. The method, assumptions and limitations are briefly discussed here. For a more thorough derivation we refer to \citet{zucker_cross-correlation_2003}. The observed spectrum is denoted by $f(n)$ and is assumed to be Doppler shifted with respect to the `template' of zero-shift, denoted by $g(n)$. Both the spectrum and the template are described as a function of pixel, $n$, such that a Doppler shift results in a uniform, linear shift in the spectrum \citep{tonry_survey_1979}.
 
 In this work, the observed spectrum is assumed to be reproducible by scaling the template with a constant ($a_0$) and shifting it by a certain number of pixels ($p_0$). The noise in the observed spectrum is assumed to be Gaussian with a fixed standard deviation ($\sigma_0$), so that:
 \begin{equation}
@@ -106,13 +106,13 @@ The spectra (or specific masks) are assumed to be `continuum-subtracted', such t
 \sum_n g(n) = 0 \textrm{.}
 \end{equation}
 
-The last assumption that the number of pixels, $N$, is constant breaks down. For very small velocity shifts, the edge effects are negligible. However, for velocities of the order of 1000 km\,s$^{-1}$, the assumption is not applicable and hence, we use a rolling function to carry out the shift in pixels. This does not have any impact on the computation of the CCF or the determination of the peak. 
+The last assumption that the number of pixels, $N$, is constant breaks down. For very small velocity shifts, the edge effects are negligible. However, for velocities of the order of 1000 km\,s$^{-1}$, the assumption is not applicable and hence, we use a rolling function to carry out the shift in pixels. This does not have any impact on the computation of the CCF or the determination of the peak.
 
 In order to express the CCF in terms of a log-likelihood function, for a given shift of $p$ pixels we first define the cross-covariance function,
 \begin{equation}
 R(p) =\frac{1}{N}\sum_n f(n) g(n-p)\textrm{.}
 \end{equation}
-The standard deviation of the spectrum ($s_f$) and template ($s_g$) can be expressed as 
+The standard deviation of the spectrum ($s_f$) and template ($s_g$) can be expressed as
 \begin{equation}
 s_f^2 = \frac{1}{N} \sum_n f^2 (n) \textrm{, and}
 \end{equation}
@@ -128,9 +128,9 @@ This CCF can be written in the form of a log-likelihood function. We denote a sh
 \sigma_p^2 = - \left[N \frac{C''(\hat{p})}{C(\hat{p})} \frac{C^2(\hat{p})}{1 - C^2(\hat{p})} \right]^{-1} \textrm{,}
 \label{eq:errorCCF}
 \end{equation}
-where $C''(p)$ is the second derivative of the CCF. Equation \ref{eq:errorCCF} shows that the errors depend on the number of pixels $N$, the sharpness of the peak $C''(\hat{p}) / C(\hat{p})$ and the line S/N ratio $C^2(\hat{p}) / (1 - C^2(\hat{p}))$. 
+where $C''(p)$ is the second derivative of the CCF. Equation \ref{eq:errorCCF} shows that the errors depend on the number of pixels $N$, the sharpness of the peak $C''(\hat{p}) / C(\hat{p})$ and the line S/N ratio $C^2(\hat{p}) / (1 - C^2(\hat{p}))$.
 
-The success of the cross-correlation depends on the accuracy and stability of the template. This is due to the fact that the template is implicitly assumed to represent the data accurately. In practice, the template is chosen to be the observations with the highest S/N. A parabola is fit to the top of the CCF in order to determine the peak and the related derivatives. The errors from the least-squares fitting of the parabola agree with those derived from Eq. \ref{eq:errorCCF}, giving confidence in the validity of the method. Once the RVs and measurement uncertainties are derived, a weighted average of the shifted spectra is used to derive a co-added spectrum that has a higher S/N. This is then used as a template to re-derive the relative RVs and, thus, in an iterative fashion, an ideal mask and a final measurement are converged upon. We note that the RVs derived are relative to a particular observation in time, and that the velocities measured are, by no means, absolute values. In order to compare with those in the literature or to the rest frame, a uniform shift must be imposed. 
+The success of the cross-correlation depends on the accuracy and stability of the template. This is due to the fact that the template is implicitly assumed to represent the data accurately. In practice, the template is chosen to be the observations with the highest S/N. A parabola is fit to the top of the CCF in order to determine the peak and the related derivatives. The errors from the least-squares fitting of the parabola agree with those derived from Eq. \ref{eq:errorCCF}, giving confidence in the validity of the method. Once the RVs and measurement uncertainties are derived, a weighted average of the shifted spectra is used to derive a co-added spectrum that has a higher S/N. This is then used as a template to re-derive the relative RVs and, thus, in an iterative fashion, an ideal mask and a final measurement are converged upon. We note that the RVs derived are relative to a particular observation in time, and that the velocities measured are, by no means, absolute values. In order to compare with those in the literature or to the rest frame, a uniform shift must be imposed.
 
 %####################################################################
 \begin{figure}
@@ -141,7 +141,7 @@ The success of the cross-correlation depends on the accuracy and stability of th
 \end{figure}
 %####################################################################
 \subsection{Mask selection}
-After addressing the choice of the template, the question of which spectral lines or wavelength ranges (henceforth `masks') to be used for the RV measurements arises. Most traditional methods of measuring RVs are applied to the strongest lines, as they contain the most signal. 
+After addressing the choice of the template, the question of which spectral lines or wavelength ranges (henceforth `masks') to be used for the RV measurements arises. Most traditional methods of measuring RVs are applied to the strongest lines, as they contain the most signal.
 On the other hand, different lines originate in different ions and form in different regions in the wind. Therefore, by comparing the RVs measured using different sets of lines, we can both probe different parts of the wind as well as identify the most reliable mask to represent the motion of the star.
 
 However, with high-resolution and good S/N, weak lines also contain significant amounts of information that can be used. As the WR spectra contains much broader (and stronger) spectral features, using the entire spectrum in the cross-correlation process can mitigate the problem of contamination from the secondary \citep{david-uraz_using_2012}. To investigate which masks are the most appropriate and if individual lines are better than the full spectrum, RVs are first measured using a variety of masks. These masks are created by selecting lines of different strengths and different ions, as well as with the full spectrum.
@@ -174,7 +174,7 @@ where $\sigma_\textrm{RV}$ is a measure of the real dispersion in the data. Sinc
 \begin{figure}
     \centering
     \includegraphics[width=\hsize]{chapters/WC/image/WR137_shortcadence.pdf}
-    \caption{Phased RV plot for WR 137. Archival RV measurements are shown in blue and are taken from \citet{lefevre_spectroscopic_2005}. The RV measurements from HERMES using the strong C {\sc iv} lines are shown in red. Along with these measurements, the inset shows the short cadence measurements with the full spectrum (green) and weak He {\sc ii} lines (purple). All HERMES RV measurements have been shifted by $-$23.5~\kms{} in order to convert relative RV measurements to absolute values.} 
+    \caption{Phased RV plot for WR 137. Archival RV measurements are shown in blue and are taken from \citet{lefevre_spectroscopic_2005}. The RV measurements from HERMES using the strong C {\sc iv} lines are shown in red. Along with these measurements, the inset shows the short cadence measurements with the full spectrum (green) and weak He {\sc ii} lines (purple). All HERMES RV measurements have been shifted by $-$23.5~\kms{} in order to convert relative RV measurements to absolute values.}
     \label{fig:WR137_shortcadence}
 \end{figure}
 %####################################################################
@@ -182,7 +182,7 @@ Accounting for the wind variability provides us with an estimate on the effectiv
 
 Upon examination, two observations can be made based on Fig. \ref{fig:ions}. The first is that for masks with He {\sc ii} lines, a large scatter is seen independent of the strength of the lines. The second is that across other ions, masks with strong lines perform better than those with weak lines. It is not trivial to explain these observations, as there are multiple factors that are at play for each line (e.g. oscillator strength, number populations of the particular state, line-formation region, etc.).
 
-% This is not surprising, as ions with a lower ionisation state are formed in cooler regions of the wind, which are farther out and are hence more affected by wind variability. However, it may seem counter-intuitive that weak lines are also susceptible to wind variability, but it is easy to explain. The formation region for weak lines is quite a thin shell as compared to the more extended one for stronger lines. As a result, a small perturbation of the wind is more significant in a thin shell than a thick one, resulting in a larger effect on the measured RVs. This reasoning is strengthened by the fact that weak lines of highly ionised ions (e.g. C iv weak) perform better than weak He ii lines. 
+% This is not surprising, as ions with a lower ionisation state are formed in cooler regions of the wind, which are farther out and are hence more affected by wind variability. However, it may seem counter-intuitive that weak lines are also susceptible to wind variability, but it is easy to explain. The formation region for weak lines is quite a thin shell as compared to the more extended one for stronger lines. As a result, a small perturbation of the wind is more significant in a thin shell than a thick one, resulting in a larger effect on the measured RVs. This reasoning is strengthened by the fact that weak lines of highly ionised ions (e.g. C iv weak) perform better than weak He ii lines.
 
 In order to ascertain that the statistical errors do not bias our mask selection, we calculated values for $\sigma_w$ using Eq.~\ref{eq:sig_RV}. The results are twofold - masks with ions of a higher ionisation state are the least affected by wind variability and strong lines are affected less than weak lines. Finally, by comparing the absolute values of $\sigma_w$ in Fig.\,\ref{fig:ions}, the full spectrum mask is least affected by wind variability. For strong C {\sc iv} lines, the average $\sigma_p$ is larger than the corresponding value of $\sigma_\textrm{RV}$, implying that the wind variability is within the statistical error (and hence $\sigma_w=0$). Given that the winds of all WC stars do not necessarily exhibit the same characteristics, this exercise has to be conducted for each object individually in order to select a specific ion to use. Upon inspection, diagnostic plots such as Fig.\,\ref{fig:ions} for each object indicate that the full spectrum shows the least scatter. Considering the fact that the WR component dominates the spectrum for all of our objects, we decided to use the full spectrum to measure RVs.
 
@@ -190,7 +190,7 @@ In order to ascertain that the statistical errors do not bias our mask selection
 \begin{figure*}
     \centering
     \includegraphics[width=\hsize]{chapters/WC/image/RV_SC_ions.pdf}
-    \caption{RV measurements for WR 137 during the short cadence study. At the bottom of the plot are the values of ($\sigma_w$, $\sigma_\textrm{RV}$) (\kms{}) for each mask. It is observed that the helium lines (and weak lines in general) have large dispersions. The masks least affected by wind variability are `full spec', `C4 strong', `C4 moderate', and `C4 all' (determined by their values of $\sigma_w$).} 
+    \caption{RV measurements for WR 137 during the short cadence study. At the bottom of the plot are the values of ($\sigma_w$, $\sigma_\textrm{RV}$) (\kms{}) for each mask. It is observed that the helium lines (and weak lines in general) have large dispersions. The masks least affected by wind variability are `full spec', `C4 strong', `C4 moderate', and `C4 all' (determined by their values of $\sigma_w$).}
     \label{fig:ions}
 \end{figure*}
 %####################################################################
@@ -198,20 +198,20 @@ In order to ascertain that the statistical errors do not bias our mask selection
 \section{Results and discussion}\label{sect:results}
 %####################################################################
 \subsection{Observed spectroscopic binary fraction}
-For all the objects in our sample, RVs were measured using multiple masks. The tests described in the previous section reveal that the measurements using the full spectrum are the most reliable and we adopt those in the following section. These are given in Appendix \ref{s:tables_RV}. To identify objects with significant RV variation, we look at the maximum RV variation for each star, given by 
+For all the objects in our sample, RVs were measured using multiple masks. The tests described in the previous section reveal that the measurements using the full spectrum are the most reliable and we adopt those in the following section. These are given in Appendix \ref{s:tables_RV}. To identify objects with significant RV variation, we look at the maximum RV variation for each star, given by
 \begin{equation}\label{eq:del_RV}
 \Delta \textrm{RV} = \textrm{max}(|\varv_i - \varv_j|),
 \end{equation}
-where $\varv_i$ and $\varv_j$ are the RV measurements for two epochs $i-j$ for a given star. One then imposes a minimum amplitude threshold $C$ for RV variations computed from any individual pair of epochs to be `significant'. 
+where $\varv_i$ and $\varv_j$ are the RV measurements for two epochs $i-j$ for a given star. One then imposes a minimum amplitude threshold $C$ for RV variations computed from any individual pair of epochs to be `significant'.
 \begin{equation}\label{eq:signif_crit}
 \Delta \textrm{RV} \ge C.
 \end{equation}
 
-Unlike in \citet{sana_vlt-flames_2013}, we do not enforce a significance criteria for each pair of RV measurements (Eq.\,4 in \citealt{sana_vlt-flames_2013} compared to Eq. \ref{eq:signif_crit} above). This is due to the fact that the values for $\sigma_p$ are typically very small (sub-\kms{}) and underestimate the true error (see Sect.\,\ref{sect:wind-var}). 
+Unlike in \citet{sana_vlt-flames_2013}, we do not enforce a significance criteria for each pair of RV measurements (Eq.\,4 in \citealt{sana_vlt-flames_2013} compared to Eq. \ref{eq:signif_crit} above). This is due to the fact that the values for $\sigma_p$ are typically very small (sub-\kms{}) and underestimate the true error (see Sect.\,\ref{sect:wind-var}).
 
 Given this criterion, the observed fraction of RV variable objects (\fobsWC{}) can be calculated as a function of threshold $C$ (Fig. \ref{fig:bin_frac}). It is encouraging to see all the known binary systems group together on the right side of the plot. We can now take advantage of the fact that a subset of our sample are confirmed binaries to constrain a suitable value for $C$.
 
-Two kinks can be seen, in the ranges of 5 to 10\,\kms{} and of 12 to 19\,\kms{}. A threshold value of 10\,\kms{} leads to an observed binary fraction of \fobsWC{} = 0.58, and that of 15\,\kms{} results in \mbox{\fobsWC{} = 0.33}. To include the known and candidate binaries in our binary fraction, we choose the former threshold of 10\,\kms{}. 
+Two kinks can be seen, in the ranges of 5 to 10\,\kms{} and of 12 to 19\,\kms{}. A threshold value of 10\,\kms{} leads to an observed binary fraction of \fobsWC{} = 0.58, and that of 15\,\kms{} results in \mbox{\fobsWC{} = 0.33}. To include the known and candidate binaries in our binary fraction, we choose the former threshold of 10\,\kms{}.
 
 %####################################################################
 % \begin{table*}
@@ -230,7 +230,7 @@ Two kinks can be seen, in the ranges of 5 to 10\,\kms{} and of 12 to 19\,\kms{}.
 \toprule
 
 WR\# & Spectral Type & \multicolumn{2}{c}{Binary Status}  & Period & $e$ & \DelRV{}  & $\sigma_\textrm{RV}$  \\ \cline{3-4}
- & (GCWR) & GCWR & This work & (d) & &(\kms{}) &(\kms{})\\\hline 
+ & (GCWR) & GCWR & This work & (d) & &(\kms{}) &(\kms{})\\\hline
  \midrule
 4 & WC5\,+\,? & SB1, no d.e.l. & binary & - & - & 10.4 & 2.5\\
 5 & WC6 & - & single & - & - & 4.9 & 1.7\\
@@ -243,7 +243,7 @@ WR\# & Spectral Type & \multicolumn{2}{c}{Binary Status}  & Period & $e$ & \DelR
 140 & WC7pd\,+\,O4-5 & SB2, VB & binary & 2895.68 $\pm$ 0.17\tnote{(c)} & 0.8996$^{+0.0008}_{-0.0008}$\tnote{(c)} & 21.6 & 6.5\\
 143 & WC4\,+\,Be & d.e.l. & binary & - & - & 11.2 & 4.0\\
 146 & WC6\,+\,O8 & SB2, VB & binary & - & - & 18.9 & 5.9\\
-154 & WC6 & - & single & - & - & 3.4 & 1.3\\ %\hline 
+154 & WC6 & - & single & - & - & 3.4 & 1.3\\ %\hline
 \bottomrule
 \end{tabular*}
 \begin{tablenotes}
@@ -272,9 +272,9 @@ Although the magnitude-limited sample of WC stars in this study is small, the ev
 The second is that there seems to be a lack of short-period (P $<$ 100~d) binaries compared to the overabundance of short-period systems observed for main-sequence O-type stars \citep[][]{sana_binary_2012}. This is especially surprising given that the observational bias favours the detection of short-period WR binaries, which are expected to exhibit high RV amplitudes. Of the known binaries in our sample, orbits are derived only for WR 137, WR 140 and WR 113, with only WR 113 being part of a short-period binary system (P $\sim$ 29.7~d). This low fraction of detected short-period binary systems (0.08) is in stark contrast to what has been found for main-sequence O-type stars.
 %, as well as for WN stars (see Fig. \ref{fig:obs_pdist}).
 
-In order to investigate the observed lack of short-period WC binary systems, we scoured the literature in order to expand our small sample. The GCWR reports 237 WC stars in the Galaxy, of which 87 were included in \citetalias{van_der_hucht_viith_2001}. For the sake of considering WC stars that were thoroughly studied for binarity, we focus on this subset of 87 stars. 
+In order to investigate the observed lack of short-period WC binary systems, we scoured the literature in order to expand our small sample. The GCWR reports 237 WC stars in the Galaxy, of which 87 were included in \citetalias{van_der_hucht_viith_2001}. For the sake of considering WC stars that were thoroughly studied for binarity, we focus on this subset of 87 stars.
 
-Of this subset, 37 WCs are classified as detected or probable binaries, resulting in an observed Galactic WC binary fraction of 0.41. However, this fraction is severely biased towards short-period systems. This is because historical studies were mainly sensitive to short-period systems, given typical RV measurement uncertainties of the order of ${\sim}$20 km\,s$^{-1}$. Despite the large bias towards detecting short-period systems, 15 report periods shorter than 100~d, seven of which have derived orbits. Therefore, the fraction of Galactic WC stars that are conclusively in short-period binary systems is only 0.09, which is consistent with the findings of this study. 
+Of this subset, 37 WCs are classified as detected or probable binaries, resulting in an observed Galactic WC binary fraction of 0.41. However, this fraction is severely biased towards short-period systems. This is because historical studies were mainly sensitive to short-period systems, given typical RV measurement uncertainties of the order of ${\sim}$20 km\,s$^{-1}$. Despite the large bias towards detecting short-period systems, 15 report periods shorter than 100~d, seven of which have derived orbits. Therefore, the fraction of Galactic WC stars that are conclusively in short-period binary systems is only 0.09, which is consistent with the findings of this study.
 
 %####################################################################
 \begin{figure}
@@ -308,40 +308,40 @@ To estimate the sensitivity domain of our survey, we perform MC simulations foll
 %---------old P detect--------------------
 \subsubsection{Intrinsic multiplicity properties}\label{subs:intMulProp}
 
-The observed binary fraction is a minimum estimate on the number of true WC binaries in our sample. The number of undetected binary systems depends on our time sampling, our RV measurement accuracy, and the intrinsic distribution of orbital parameters. Given our limited sample size, it is beyond the scope of this paper (and probably unrealistic) to perform a self-consistent derivation of the distributions of orbital parameters, and of the binary fraction  \citep[as in, e.g., ][]{sana_binary_2012, sana_vlt-flames_2013}. Nevertheless, it is still possible to obtain useful information on the multiplicity properties of the parent population. In this context, we adopt two different and complementary approaches, both using MC simulations and the same underlying assumptions as in Sect.~\ref{s:detect}. 
+The observed binary fraction is a minimum estimate on the number of true WC binaries in our sample. The number of undetected binary systems depends on our time sampling, our RV measurement accuracy, and the intrinsic distribution of orbital parameters. Given our limited sample size, it is beyond the scope of this paper (and probably unrealistic) to perform a self-consistent derivation of the distributions of orbital parameters, and of the binary fraction  \citep[as in, e.g., ][]{sana_binary_2012, sana_vlt-flames_2013}. Nevertheless, it is still possible to obtain useful information on the multiplicity properties of the parent population. In this context, we adopt two different and complementary approaches, both using MC simulations and the same underlying assumptions as in Sect.~\ref{s:detect}.
 
 % The first step focuses on reconstructing the underlying period distribution of our sample. For this purpose, we compute for each object $k$, the  probability $p_k(P,q)$ of each combination of orbital period $P$ and mass-ratio $q$ to reproduce the measured $\max(\Delta \textrm{ RV})$-signal within the 95\%\ confidence interval ($\pm3.2$~\kms) of the observed value. After normalising the probability to unity over a given $P-q$ grid, we sum up and collapse along the mass-ratio axis to obtain the likely period distribution (Fig.~\ref{f:Pdist}). We perform this exercise with the full sample in two different scenarios: by implicitly assuming that all the objects in our sample are binaries, and that only seven out of twelve objects pass our binary detection threshold. In either case, the emergent picture is the same (Fig.~\ref{f:Pdist}): a broad peak at long periods in the range of $10^3$ to $10^4$~d and a low-level plateau at shorter period that amount for about 10\%\ of the number of binaries in the peak.
 
 As a first step, we attempt to constrain the true binary fraction among our sample of WC stars. A simple approach would be to correct the number of detected binaries using a detection probability factor that depends on the orbital period of the detected binaries. This probability can be readily read from Fig.~\ref{f:Pdetect}. Unfortunately, only three of the objects above our binary threshold have known orbital periods (see Table~\ref{tab:WC_data}). Lacking further information, we conservatively adopt the detection probability corresponding to period of $10^{3.5}$ d (approximately 10 years) for the remaining objects (shorter periods can be excluded on the basis of the previous step, as they would have yield a RV-amplitude larger than 30~\kms{} in over 90\%\ of the cases). Under these hypotheses, the obtained correction factor is found to be of the order of 3/2, suggesting an intrinsic binary fraction of about 0.9 for the objects in our sample in the considered parameter space (P up to $10^5$~d and mass-ratios up to 3.0).
 
-To test these intriguing results, we set up a last experiment where we test different period distributions and intrinsic binary fractions with the same assumptions on $q$, $i$, and $e$ as in Sect.\,\ref{s:detect}. We reject combinations of orbital configurations and binary fractions that cannot reproduce a simple observational fact: six objects are observed with values of \DelRV{} between 10 and 30 \kms{} within 1-$\sigma$ (Fig.~\ref{fig:bin_frac})\footnote{Similar results were obtained when trying to reproduce the number of stars with RV amplitude between 15 and 30~km\,s$^{-1}$.}. We constructed two experiments based on: 
+To test these intriguing results, we set up a last experiment where we test different period distributions and intrinsic binary fractions with the same assumptions on $q$, $i$, and $e$ as in Sect.\,\ref{s:detect}. We reject combinations of orbital configurations and binary fractions that cannot reproduce a simple observational fact: six objects are observed with values of \DelRV{} between 10 and 30 \kms{} within 1-$\sigma$ (Fig.~\ref{fig:bin_frac})\footnote{Similar results were obtained when trying to reproduce the number of stars with RV amplitude between 15 and 30~km\,s$^{-1}$.}. We constructed two experiments based on:
 \begin{enumerate}
     \item[-] a uniform $\log P$ distribution with variable minimum and maximum boundaries, and
     \item[-] a normal $\log P$ distribution with variable central period and $1\sigma$-dispersion.
-\end{enumerate} 
+\end{enumerate}
 For these experiments, we removed WR~113 from the sample as its significantly different orbital period would require more complicated functional forms than those adopted here. In that case, we also request that no system with an RV variation amplitude above 30~\kms{} be found.
 
-In both cases, parent distributions with intrinsic binary fractions larger than 90\%\ performed significantly better than those with lower binary fractions. This is in line with our above estimate based on the detection probability. 
-% Both the uniform and the normal distributions suggest a rather narrow peak centered around $10^3$ to $10^{4}$~d. 
+In both cases, parent distributions with intrinsic binary fractions larger than 90\%\ performed significantly better than those with lower binary fractions. This is in line with our above estimate based on the detection probability.
+% Both the uniform and the normal distributions suggest a rather narrow peak centered around $10^3$ to $10^{4}$~d.
 
 \subsubsection{Intrinsic binary fraction of the parent WC population}
 Overall, the results of these MC experiments suggest that WC stars in our sample have a large binary fraction and are dominated by long-period systems. The present sample was selected based on declination and magnitude limits and should not contain any specific selection bias. Therefore, it should remain representative of the entire WC population. Under these considerations, a test-of-hypothesis at the 10\%-significance level allows us to reject parent binary fractions smaller than 0.72\footnote{Specifically, binomial chances to draw 11 or more binaries in a sample of 12 (corresponding the retrieved intrinsic binary fraction in the sample of $>0.9$) drops below 10\% for parent binary fraction smaller than 0.72.}. This suggests that, with a 90\% confidence limit, the true binary fraction of the carbon-sequence WR population in the Milky Way lays in the range 0.72 to 1.00. In contrast to the results in Sect. \ref{subs:intMulProp}, the latter value does account for the sample size.
 %-------------------------------------------------------------------
 \section{Evolutionary implications and conclusions}\label{sect:conclusions}
 %-------------------------------------------------------------------
-With a small, magnitude-limited sample of northern Galactic WC stars, we demonstrated that using cross-correlation with high-resolution spectra allows us to derive accurate RV measurements of WR stars, and to even quantify the wind-variability. With a sample of 12 stars spread evenly over different spectral-types, we find an observed binary fraction of 0.58. Using MC simulations, we attempt to gain information about the parent WC population and conclude that the fraction of Galactic WC stars that are part of a binary system is at least 0.72, significantly larger than the literature value of ${\sim}$0.4. 
+With a small, magnitude-limited sample of northern Galactic WC stars, we demonstrated that using cross-correlation with high-resolution spectra allows us to derive accurate RV measurements of WR stars, and to even quantify the wind-variability. With a sample of 12 stars spread evenly over different spectral-types, we find an observed binary fraction of 0.58. Using MC simulations, we attempt to gain information about the parent WC population and conclude that the fraction of Galactic WC stars that are part of a binary system is at least 0.72, significantly larger than the literature value of ${\sim}$0.4.
 
-% Pertaining future validation of the multiplicity properties, we briefly discuss some of the evolutionary implications of our results {\it assuming} they are validated by further observations. 
-Our observations clearly show that there is a deficiency in the number of short-period WC binaries in the Galaxy. Furthermore, our MC simulations indicate that Galactic WC stars primarily exist in long-period binaries (P $>$ 100~d). Increasing the sample and comparing these results to the populations of WN and main-sequence O-type binaries can help us put constraints on the viable evolutionary channels for WC stars and on the forward evolution of massive binaries. In Chapter 4, we analyse the 16 WNE stars in our sample compare the intrinsic multiplicity properties with those of the WC population. 
+% Pertaining future validation of the multiplicity properties, we briefly discuss some of the evolutionary implications of our results {\it assuming} they are validated by further observations.
+Our observations clearly show that there is a deficiency in the number of short-period WC binaries in the Galaxy. Furthermore, our MC simulations indicate that Galactic WC stars primarily exist in long-period binaries (P $>$ 100~d). Increasing the sample and comparing these results to the populations of WN and main-sequence O-type binaries can help us put constraints on the viable evolutionary channels for WC stars and on the forward evolution of massive binaries. In Chapter 4, we analyse the 16 WNE stars in our sample compare the intrinsic multiplicity properties with those of the WC population.
 
-% O-type stars are generally expected to evolve through the modified Conti scenario \citep[O$\rightarrow$LBV$\rightarrow$WN$\rightarrow$WC$\rightarrow$WO,][]{2007Crowther}, although the dominant mechanism leading to the formation of WR stars is still debated. Keeping this in mind, we briefly look at the outcome of possible evolutionary channels for short-period O-type binaries. These binaries can interact through Roche Lobe overflow (RLOF), common-envelope evolution, or even through mergers. We explore possible mechanisms that can explain the formation of long-period WC binaries when starting from short-period O-type binaries. 
+% O-type stars are generally expected to evolve through the modified Conti scenario \citep[O$\rightarrow$LBV$\rightarrow$WN$\rightarrow$WC$\rightarrow$WO,][]{2007Crowther}, although the dominant mechanism leading to the formation of WR stars is still debated. Keeping this in mind, we briefly look at the outcome of possible evolutionary channels for short-period O-type binaries. These binaries can interact through Roche Lobe overflow (RLOF), common-envelope evolution, or even through mergers. We explore possible mechanisms that can explain the formation of long-period WC binaries when starting from short-period O-type binaries.
 
-% A first viable scenario that produces long-period binaries is the RLOF channel. Depending on the initial orbital configuration, the primary may undergo Case-A (on the main sequence) or early Case-B (post main sequence) mass transfer. The companion will, thus, strip the primary of its hydrogen envelope, leading to the formation of a WN star. Except in the case of a low-mass companion, this results in a mass-ratio inversion, irrespective of whether the mass transfer is conservative or non-conservative. This then leads to the widening of the orbit. Further loss of mass through winds during the entire WN and the early WC phase adds to the widening of the orbit. 
+% A first viable scenario that produces long-period binaries is the RLOF channel. Depending on the initial orbital configuration, the primary may undergo Case-A (on the main sequence) or early Case-B (post main sequence) mass transfer. The companion will, thus, strip the primary of its hydrogen envelope, leading to the formation of a WN star. Except in the case of a low-mass companion, this results in a mass-ratio inversion, irrespective of whether the mass transfer is conservative or non-conservative. This then leads to the widening of the orbit. Further loss of mass through winds during the entire WN and the early WC phase adds to the widening of the orbit.
 
-% The simulation study by \citet{2020Langer} explores the RLOF channel, albeit with the aim of constraining the period distribution of OB+BH binary systems (top panel of their Figure 6). Given the fact that WC stars are thought to be the direct progenitors of BHs and assuming that the orbit does not undergo drastic change during the short-lived WC phase, this distribution should be valid for WC binary systems. The distribution has a small peak at short periods (log~P $\sim$ 0.7) and a larger peak at long periods (log~P $\sim$ 2.2). It is important to note that the simulations in \citet{2020Langer} are performed with MESA binary evolution tracks at lower metallicity, for the Large Magellanic Cloud. At Galactic metallicity, the corresponding evolutionary tracks will have higher mass-loss rates and hence, shift the distribution towards longer periods. Coupled with the fact that the theoretical distribution of \citet{2020Langer} can contain BHs formed from WN stars, it is plausible that our observations sample the tail of the period distribution. 
+% The simulation study by \citet{2020Langer} explores the RLOF channel, albeit with the aim of constraining the period distribution of OB+BH binary systems (top panel of their Figure 6). Given the fact that WC stars are thought to be the direct progenitors of BHs and assuming that the orbit does not undergo drastic change during the short-lived WC phase, this distribution should be valid for WC binary systems. The distribution has a small peak at short periods (log~P $\sim$ 0.7) and a larger peak at long periods (log~P $\sim$ 2.2). It is important to note that the simulations in \citet{2020Langer} are performed with MESA binary evolution tracks at lower metallicity, for the Large Magellanic Cloud. At Galactic metallicity, the corresponding evolutionary tracks will have higher mass-loss rates and hence, shift the distribution towards longer periods. Coupled with the fact that the theoretical distribution of \citet{2020Langer} can contain BHs formed from WN stars, it is plausible that our observations sample the tail of the period distribution.
 
-% Another evolutionary scenario focuses on common-envelope evolution and the possibility of a merger. Common-envelope evolution leads to the shrinking of the orbit, resulting in a very short-period binary system that may merge. In the case of a merger, the binary system ceases to exist and may result in an apparently single WC star. This channel may partly be responsible for the formation of the apparently-single WC stars in our sample. However, it is also possible that these stars formed as single stars. 
+% Another evolutionary scenario focuses on common-envelope evolution and the possibility of a merger. Common-envelope evolution leads to the shrinking of the orbit, resulting in a very short-period binary system that may merge. In the case of a merger, the binary system ceases to exist and may result in an apparently single WC star. This channel may partly be responsible for the formation of the apparently-single WC stars in our sample. However, it is also possible that these stars formed as single stars.
 
 % A final channel to consider that produces long-period binaries invokes the existence of a hierarchical triple system \citep[e.g.][]{2014Sana,2016MaizApellaniz}. If the outer component can evolve into a WR due to wind-stripping then it can be observed as a component in a wide binary system. Alternatively, the merger of the inner binary followed by strong mass loss can also lead to the formation of a WR star, leading to multiple possibilities. These scenarios invoke the formation of a WN star by wind-stripping, in contrast to companion-stripping. Lastly, the expansion of the inner system might lead to dynamical interaction with the tertiary companion, potentially resulting in the expulsion of one of the stars in the system.
 
-% In conclusion, these results exhibit that there is a dire need to increase the sample by expanding RV surveys to the southern sky and to fainter magnitudes. This will enable us to derive the binary fraction and the intrinsic distributions of the orbital parameters of massive stars at the end stages of their lives in a self-consistent manner. This combined with what is known for main sequence O-type stars, is the key to advancing our knowledge of massive binary evolution. 
+% In conclusion, these results exhibit that there is a dire need to increase the sample by expanding RV surveys to the southern sky and to fainter magnitudes. This will enable us to derive the binary fraction and the intrinsic distributions of the orbital parameters of massive stars at the end stages of their lives in a self-consistent manner. This combined with what is known for main sequence O-type stars, is the key to advancing our knowledge of massive binary evolution.
