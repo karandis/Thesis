@@ -1697,7 +1697,7 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
 \mbox{}
 \vfill
 {\footnotesize\sffamily{\setlength{\parindent}{0ex}
-\textbf{Cover design credit:} }} \\\\
+\textbf{Cover design credit: Anisha Panicker} }} \\\\
 
 
 
